@@ -1,0 +1,53 @@
+
+ <!-- <div class="col-md-3 col-sm-6" >
+{{characterdetail.name}}
+</div> -->
+<!-- <div>
+    <div>
+    <ng-container *ngIf="characterdetail">
+        <h1>{{ characterdetail.name }}</h1>
+      </ng-container>
+    </div>
+</div> -->
+
+<div class="container">
+	<div class="row">
+		
+		<div class="col">
+            <ng-container *ngIf="characterdetail">
+			<div class="weather-card rain">
+				<div class="top">
+					<div class="wrapper">
+						
+                          
+                          <img [src]=" characterdetail.image">
+                       
+						
+					</div>
+				</div>
+				<div class="bottom">
+					<div class="wrapper">
+                      <h5>{{characterdetail.name}}</h5>  
+                       
+						
+					</div>
+                    <p>{{characterdetail.species}} - {{characterdetail.status}}</p>
+                    <div class="character-location">
+                        <h3 style="color: #d9d3d3;"> Location:</h3>
+                        <h3>{{characterdetail.location.name}}</h3>
+                    </div>
+                    <div>
+                        <p style="color: #d9d3d3;">Status-</p>
+                        <p>{{characterdetail.status}}</p>
+                        <p>Gender-{{characterdetail.gender}}</p>
+                    </div>
+                    
+                   
+				</div>
+			</div>
+           
+        </ng-container>
+        <button type="button" class="btn btn-outline-primary" (click)="goBack()">Go Back</button>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,66 @@
+<!-- <div class="col-md-6">
+ 
+  <div>
+   
+  <br />
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+      
+
+        <th>
+          <span>ID</span
+          >
+         
+        </th>
+
+        <th scope="col">Name</th>
+        <th>
+          <span>Status</span
+          >
+         
+        </th>
+
+        <th scope="col">Species</th>
+        <th scope="col">type</th>
+       
+      </tr>
+    
+    </thead>
+    <tbody>
+     
+      <tr *ngFor="let users of alldata">
+       <th> {{users.id}}</th>
+        <th>{{users.name}}</th>
+        <th>{{users.status}}</th>
+        <th>{{users.species}}</th>
+        <th>{{users.type}}</th>
+
+       
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>  -->
+
+<div class="col-md-3 col-sm-6" *ngFor="let users of alldata" >
+  <div class="card card-block"  (click)="onEditClick(users.id)">
+    <div>
+     
+      <img [src]=" users['image'] ">
+      
+    </div>
+   
+
+   
+      <h5 class="card-title mt-3 mb-3">{{users.name}}</h5>
+      <div class="card-text">
+      <h3 >Spcies :{{users.species}}
+      </h3>
+     
+    
+
+    </div>
+    
+  </div>
+</div>
